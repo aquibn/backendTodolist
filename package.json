@@ -1,0 +1,25 @@
+{
+  "name": "todolistbck",
+  "version": "1.0.0",
+  "description": "todolist backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aquibn/backendTodolist.git"
+  },
+  "author": "naweed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aquibn/backendTodolist/issues"
+  },
+  "homepage": "https://github.com/aquibn/backendTodolist#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.13.0"
+  }
+}
