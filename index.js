@@ -1,32 +1,9 @@
 const express = require('express');
 const app = express();
 const bodyparser = require('body-parser');
-const {MongoClient} = require('mongodb');
-
-async function main() {
-	const uri ='mongodb+srv://aquibn:hUk29!epR_927wq@cluster0.ktxkh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-     
-    const client = new MongoClient(uri);
-    await client.connect();
-
-    try {
-        // Connect to the MongoDB cluster
-        await client.connect();
- 
-        // Make the appropriate DB calls
-        await  listDatabases(client);
- 
-    } catch (e) {
-        console.error(e);
-    } finally {
-        await client.close();
-    }
-    console.log('done')
-};
-
-
-main().catch(console.error);
-
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://aquibn:hUk29!epR_927wq@cluster0.ktxkh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
+mongoose.Promise = global.Promise;
 
 
 app.use(bodyparser.json());
